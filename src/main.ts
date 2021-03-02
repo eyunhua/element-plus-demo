@@ -1,6 +1,17 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import App from '@/App.vue'
 import router from './router'
 import store from './store'
+import { components, plugins } from 'config/element.config'
 
-createApp(App).use(store).use(router).mount('#app')
+const app = createApp(App)
+
+components.forEach((component: any) => {
+  console.log(component, 'jjj')
+  app.component(component.name, component)
+})
+
+plugins.forEach((plugin: any) => {
+  app.use(plugin)
+})
+app.use(store).use(router).mount('#app')

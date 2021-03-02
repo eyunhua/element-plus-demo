@@ -1,4 +1,4 @@
-# element-plus-demo1
+# element-plus-demo
 
 ## Project setup
 ```
