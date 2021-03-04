@@ -6,7 +6,7 @@ module.exports = {
   chainWebpack: config => {
     config.resolve.alias
       .set('@', resolve('src'))
-      .set('theme', resolve('src/assets/style/theme'))
+      .set('theme', resolve('src/theme'))
       .set('config', resolve('src/config'))
       .set('utils', resolve('src/utils'))
       .set('components', resolve('src/components'))

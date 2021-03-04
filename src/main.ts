@@ -7,7 +7,6 @@ import { components, plugins } from 'config/element.config'
 const app = createApp(App)
 
 components.forEach((component: any) => {
-  console.log(component, 'jjj')
   app.component(component.name, component)
 })
 
